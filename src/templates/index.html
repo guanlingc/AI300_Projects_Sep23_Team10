@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Customer Churn</title>
+</head>
+<body>
+    <div>
+        <h1>Predict Customer Churn</h1>
+        <form method="POST">
+            <label for="has_premium_support">Premium Tech Support:</label><br>
+                <select name="has_premium_support" id="has_premium_support">
+                <option value=""></option>
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+
+            <label for="has_unlimited_data">Unlimited Data:</label><br>
+                <select name="has_unlimited_data" id="has_unlimited_data">
+                <option value=""></option>
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+
+            <label for="contract_type">Contract_Type:</label><br>
+                <select name="contract_type" id="contract_type">
+                <option value=""></option>
+                <option value="Month-to-Month" selected>Month-to-Month</option>
+                <option value="One Year">One Year</option>
+                <option value="Two Year">Two Year</option>
+            </select><br><br>
+
+            <label for="internet_type">Internet Type:</label><br>
+                <select name="internet_type" id="internet_type">
+                <option value=""></option>
+                <option value="Fiber Optic" selected>Fiber Optic</option>
+                <option value="Cable">Cable</option>
+                <option value="DSL">DSL</option>
+            </select><br><br>
+
+            <label for="num_dependents">How many dependents:</label><br>
+            <input type="text" id="num_dependents" name="num_dependents" value="1">
+            <br><br>
+
+            <label for="num_referrals">How many referrals:</label><br>
+            <input type="text" id="num_referrals" name="num_referrals" value="1">
+            <br><br>
+            
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction is defined %}
+            <h2>Model Prediction: {{ prediction }}</h2>
+        {% endif %}
+
+    </div>
+</body>
+</html>

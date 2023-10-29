@@ -16,3 +16,7 @@ def preprocess_data(df):
 
     return df_labeled
 
+def feature_and_targets(df):
+    X = df.drop('churn_label', axis=1)
+    y = df['churn_label']
+    return X, y
