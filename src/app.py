@@ -11,14 +11,14 @@ def home():
         form_input = dict(request.form)
         print(form_input)
 
-        premium_tech_support = form_input['premium_tech_support']
+        has_premium_tech_support = form_input['has_premium_tech_support']
         contract_type = form_input['contract_type']
         internet_type = form_input['internet_type']
         has_unlimited_data = form_input['has_unlimited_data']
-        num_dependents = int(form_input['num_dependents'])
-        num_referrals = int(form_input['num_referrals'])
+        num_dependents = form_input['num_dependents']
+        num_referrals = form_input['num_referrals']
 
-        model_inputs = [premium_tech_support, contract_type, internet_type, has_unlimited_data, num_dependents, num_referrals]
+        model_inputs = [has_premium_tech_support, contract_type, internet_type, has_unlimited_data, num_dependents, num_referrals]
         prediction = Model().predict(model_inputs)
         return render_template('index.html', prediction=prediction)
     
