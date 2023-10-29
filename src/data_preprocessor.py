@@ -8,9 +8,8 @@ def preprocess_data(df):
     df['contract_type'] = label_encoder.fit_transform(df['contract_type'])
     df['internet_type'] = label_encoder.fit_transform(df['internet_type'])
     df['has_unlimited_data'] = label_encoder.fit_transform(df['has_unlimited_data'])
-    df['churn_label'] = label_encoder.fit_transform(df['churn_label'])
- 
-    df['churn_label'].replace([2,1,0],[1,0,0], inplace=True)
+    df['churn_label'].replace(['Yes','No',''],[1,0,0], inplace=True)
+   
     
     df_labeled = df 
 

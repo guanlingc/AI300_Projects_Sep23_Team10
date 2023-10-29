@@ -4,9 +4,8 @@ from data_loader import initiate_local_connection, get_records, select_features
 from data_preprocessor import preprocess_data
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
-import xgboost as xgb
-# from src.xgb_model import
-# import statistics
+from catboost import CatBoostClassifier 
+import statistics
 
 
 # Obtaining data 
@@ -35,7 +34,7 @@ y = df['churn_label']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=5)
 
 # Model training
-model = xgb.XGBClassifier(learning_rate=0.1, max_depth=5, min_child_weight=4, random_state=5)
+model = CatBoostClassifier(learning_rate=0.1, depth=3, random_seed=5)
 model.fit(X_train, y_train)
 y_predict = model.predict(X_test)
 
