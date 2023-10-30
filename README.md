@@ -6,9 +6,18 @@ Name: Chan Guan Ling
 Using Catboost Model to predict customer churn
 
 requirements.txt provides the environment needed to run this pipeline
-use "src/app.py" to run the html page to obtain a prediction
+use "src/app.py" for flask app
 
 Files found in this repo
 1) Model contains the .pkl files for the trained models
 2) Research Notebook contains the .ipynb used for development and model training
 3) src contains the main pipeline 
+
+URL for deployed web app
+13.250.34.176 
+or 
+ec2-13-250-34-176.ap-southeast-1.compute.amazonaws.com
+
+Final Chosen Model 
+model = CatBoostClassifier(learning_rate=0.1, depth=2, random_seed=5)
+Final AUC = 0.8140085186938003
