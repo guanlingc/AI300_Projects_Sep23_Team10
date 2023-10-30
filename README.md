@@ -3,5 +3,12 @@ Project for AI300
 
 Name: Chan Guan Ling
 
+Using Catboost Model to predict customer churn
+
+requirements.txt provides the environment needed to run this pipeline
+use "src/app.py" to run the html page to obtain a prediction
+
 Files found in this repo
-Within Research_Notebook folder -> Research Notebook (.ipynb) 
+1) Model contains the .pkl files for the trained models
+2) Research Notebook contains the .ipynb used for development and model training
+3) src contains the main pipeline 

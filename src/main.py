@@ -6,7 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from catboost import CatBoostClassifier 
 import statistics
-
+from pathlib import Path
+import joblib
 
 # Obtaining data 
 initiate_local_connection() #establish connection with remote database
@@ -34,12 +35,14 @@ y = df['churn_label']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=5)
 
 # Model training
-model = CatBoostClassifier(learning_rate=0.1, depth=3, random_seed=5)
+model = CatBoostClassifier(learning_rate=0.1, depth=2, random_seed=5)
 model.fit(X_train, y_train)
 y_predict = model.predict(X_test)
 
 accuracy_test = metrics.accuracy_score(y_test, y_predict)
 print('\nAccuracy_score on test dataset : ', accuracy_test)
 
+# Path("../model").mkdir(exist_ok=True)
 
+# joblib.dump(model, '../model/catboost_model.pkl')
 
