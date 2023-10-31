@@ -15,11 +15,11 @@ Files found in this repo
 
 URL for deployed web app
 
-13.250.34.176 
+18.141.231.69 
 
 or
  
-ec2-13-250-34-176.ap-southeast-1.compute.amazonaws.com
+ec2-18-141-231-69.ap-southeast-1.compute.amazonaws.com
 
 Final Chosen Model
 
