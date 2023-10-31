@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif; /* sets default font to open sans, sans-serif as backup */
+    background: #8bd0fd;
+    font-size: 16px;
+    text-align: center;
+}
+
+input, select {
+    /* Reference: https://stackoverflow.com/a/6080482 */
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: #70ce75;
+}
+
+input[type=text], select {
+    width: 25%; 
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div {
+    border-radius: 5px;
+    padding: 20px;
+    /* add margins to reduce box width */
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    /* add 50% transparency for styling */
+    background-color: rgba(242, 242, 242, 0.5);    
+}
+

@@ -14,10 +14,15 @@ Files found in this repo
 3) src contains the main pipeline 
 
 URL for deployed web app
+
 13.250.34.176 
-or 
+
+or
+ 
 ec2-13-250-34-176.ap-southeast-1.compute.amazonaws.com
 
-Final Chosen Model 
+Final Chosen Model
+
 model = CatBoostClassifier(learning_rate=0.1, depth=2, random_seed=5)
+
 Final AUC = 0.8140085186938003

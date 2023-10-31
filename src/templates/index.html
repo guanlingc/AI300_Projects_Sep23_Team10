@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Predict Customer Churn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
     <div>
@@ -9,25 +11,25 @@
         <form method="POST">
             <label for="has_premium_tech_support">Premium Tech Support:</label><br>
                 <select name="has_premium_tech_support" id="has_premium_tech_support">
-                <option value="0"></option>
+                <option value=""></option>
                 <option value="1" selected>Yes</option>
                 <option value="0">No</option>
             </select><br><br>
 
-             <label for="contract_type">Contract_Type:</label><br>
+             <label for="contract_type">Contract Type:</label><br>
                 <select name="contract_type" id="contract_type">
-                <option value="0"></option>
+                <option value=""></option>
                 <option value="0" selected>Month-to-Month</option>
-                <option value="1">One Year</option>
-                <option value="2">Two Year</option>
+                <option value="2">One Year</option>
+                <option value="1">Two Year</option>
             </select><br><br>
             
             <label for="internet_type">Internet Type:</label><br>
                 <select name="internet_type" id="internet_type">
                 <option value="0"></option>
-                <option value="2" selected>Fiber Optic</option>
-                <option value="0">Cable</option>
-                <option value="1">DSL</option>
+                <option value="1" selected>Fiber Optic</option>
+                <option value="2">Cable</option>
+                <option value="3">DSL</option>
             </select><br><br>
 
             <label for="has_unlimited_data">Unlimited Data:</label><br>

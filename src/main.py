@@ -42,7 +42,5 @@ y_predict = model.predict(X_test)
 accuracy_test = metrics.accuracy_score(y_test, y_predict)
 print('\nAccuracy_score on test dataset : ', accuracy_test)
 
-# Path("../model").mkdir(exist_ok=True)
 
-# joblib.dump(model, '../model/catboost_model.pkl')
 

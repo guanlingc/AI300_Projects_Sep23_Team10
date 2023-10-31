@@ -7,9 +7,7 @@ def preprocess_data(df):
     df['has_unlimited_data'].replace(['Yes','No'],[1,0], inplace=True)
 
     df['churn_label'].replace(['Yes','No',''],[1,0,0], inplace=True)
-    
-    
-    
+
     df_labeled = df 
 
     return df_labeled

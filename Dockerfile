@@ -15,7 +15,6 @@ COPY ./model /flask-app/model
 ENV PYTHONPATH /flask-app/src
 
 # Install python package dependancies, without saving downloaded packages locally
-
 RUN pip install -r /flask-app/requirements.txt --no-cache-dir
 
 # Allow port 80 to be accessed (Flask app)
