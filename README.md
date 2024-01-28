@@ -20,6 +20,7 @@ model = CatBoostClassifier(learning_rate=0.1, depth=2, random_seed=5)
 Final AUC = 0.8140085186938003
 
 --- URL is no longer avaliable to save cost ---
+
 URL for deployed web app
 
 18.141.231.69 
@@ -27,5 +28,6 @@ URL for deployed web app
 or
  
 ec2-18-141-231-69.ap-southeast-1.compute.amazonaws.com
+
 --- URL is no longer avaliable to save cost ---
 
